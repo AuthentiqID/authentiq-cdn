@@ -13,5 +13,5 @@ else
     exit 1
 fi
 
-aws s3 cp --recursive --acl public-read --exclude ".git/*" --exclude "deploy.sh" --dryrun . $bucket
+aws s3 cp --recursive --acl public-read --exclude ".git/*" --exclude "deploy.sh" . $bucket
 
