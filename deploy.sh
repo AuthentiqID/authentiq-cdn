@@ -13,5 +13,9 @@ else
     exit 1
 fi
 
-aws s3 cp --recursive --acl public-read --exclude ".git/*" --exclude "deploy.sh" . $bucket
+aws s3 sync --delete --acl public-read --exclude ".git/*" --exclude "deploy.sh" . $bucket
+
+if [ "$1" = "prod" ]; then
+    aws cloudfront create-invalidation --distribution-id ECD0BA28GO99C --paths /
+fi
 
