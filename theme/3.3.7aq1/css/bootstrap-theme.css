@@ -4426,6 +4426,12 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 @media (max-height: 700px) and (min-width: 768px) {
   .side-nav .menu {
     position: fixed;
+    max-width: 222px;
+  }
+}
+@media (max-height: 700px) and (min-width: 768px) {
+  .side-nav .open .dropdown-menu {
+    max-width: 222px;
   }
 }
 .nav-toolbar {
